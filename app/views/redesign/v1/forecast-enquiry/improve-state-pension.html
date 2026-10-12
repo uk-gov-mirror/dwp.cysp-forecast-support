@@ -148,12 +148,6 @@ SFCYSP Forecast enquiry – {{ serviceName }} – GOV.UK Prototype Kit
       {% endfor %}
       </th>
       <td class="govuk-table__cell">
-      
-        {% if option.tag %}
-          <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-1">
-            {{ option.tag }}
-          </strong> <br>
-        {% endif %} 
         {{ option.forecast }} a week
       </td>
       <td class="govuk-table__cell">
@@ -167,6 +161,11 @@ SFCYSP Forecast enquiry – {{ serviceName }} – GOV.UK Prototype Kit
         {{ option.payableUntil }}
       </td>
       <td class="govuk-table__cell">
+                {% if option.tag %}
+          <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-1">
+            {{ option.tag }}
+          </strong> <br>
+        {% endif %} 
         <a href="improve-state-pension-details?option={{option.optionNumber}}">Option {{ option.optionNumber }} </a>
       </td>
     </tr>

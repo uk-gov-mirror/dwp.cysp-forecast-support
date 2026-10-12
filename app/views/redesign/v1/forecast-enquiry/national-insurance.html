@@ -42,7 +42,11 @@
 
 <table class="govuk-table">
     <caption class="govuk-table__caption govuk-table__caption--s">
-    {{ data.person.nationalInsuranceSummary.length }} years with payable gaps
+    {% if data.person.nationalInsuranceSummary.length  == 1 %}
+    1 year with a payable gap
+    {% else %}
+    {{ data.person.nationalInsuranceSummary.length  }} years with payable gaps
+    {% endif %}
     </caption>
 
   <thead class="govuk-table__head">

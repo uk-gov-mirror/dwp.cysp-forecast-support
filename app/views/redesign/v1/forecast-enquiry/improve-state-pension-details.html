@@ -41,16 +41,21 @@
                   </h1>
 
                   <ul class="govuk-list govuk-list--bullet">
-                    <li>Current State pension is {{ data.person.personalDetails.estimateTo }}</li>
+                    <li>Current State Pension is {{ data.person.personalDetails.estimateTo }}</li>
                     <li>Improves to {{ option.forecast }} a week</li>
                     <li>Increase of {{ option.extraWeekly }} a week</li>
-                    <li>Increase of £{{ (((option.extraWeekly | replace('£', '') | float) / 7) * 365.25).toFixed(2) }} a year
-</li>
+                    <li>Increase of £{{ (((option.extraWeekly | replace('£', '') | float) / 7) * 365.25).toFixed(2) }} a year</li>
                   </ul>
 
                   <div style=" border: 1px solid #b1b4b6; padding: 1.5em 1em 0; margin-bottom: 2em;">
                   <table class="govuk-table">
-                     <caption class="govuk-table__caption govuk-table__caption--s"> {{ option.yearsAdded }} year{% if option.yearsAdded != 1 %}s{% endif %} with gaps</caption>
+                     <caption class="govuk-table__caption govuk-table__caption--s"> 
+                      {% if option.yearsAdded == 1 %}
+                      1 year with a payable gap
+                      {% else %}
+                      {{ option.yearsAdded }} years with payable gaps
+                      {% endif %}
+                      </caption>
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
                         <th scope="col" class="govuk-table__header">Tax year</th>

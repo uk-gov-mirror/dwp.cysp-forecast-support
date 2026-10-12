@@ -112,12 +112,12 @@ All gaps FRY years: {{ allFryYears }}
 
       {% if showCurrentColumn %}
         <td class="govuk-table__cell">
-          £{{ rateTable[selectedCurrentYears] }} a week
+          £{{ (rateTable[selectedCurrentYears] | float).toFixed(2) }} a week
         </td>
       {% endif %}
 
       <td class="govuk-table__cell">
-        £{{ rateTable[selectedFryYears] }} a week
+        £{{ (rateTable[selectedFryYears] | float).toFixed(2) }} a week
       </td>
 
     </tr>
@@ -134,12 +134,12 @@ All gaps FRY years: {{ allFryYears }}
 
       {% if showCurrentColumn %}
         <td class="govuk-table__cell">
-          £{{ rateTable[allCurrentYears] }} a week
+          £{{ (rateTable[allCurrentYears] | float).toFixed(2) }} a week
         </td>
       {% endif %}
 
       <td class="govuk-table__cell">
-        £{{ rateTable[allFryYears] }} a week
+        £{{ (rateTable[allFryYears] | float).toFixed(2) }} a week
       </td>
 
     </tr>

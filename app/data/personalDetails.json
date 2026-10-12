@@ -241,7 +241,27 @@
     "newRulesRDA": "£2.55",
     "newRulesTotal": "£135.31"
   },
-  "paymentOptions": []
+  "paymentOptions": [],
+  "gapsSince2006": [
+  {
+    "taxYear": "2024 to 2025",
+    "gapType": "Partial gap year",
+    "earnings": "£5,000",
+    "cost": "£110.95"
+  },
+  {
+    "taxYear": "2023 to 2024",
+    "gapType": "Partial gap year",
+    "earnings": null,
+    "cost": "£110.95"
+  },
+  {
+    "taxYear": "2022 to 2023",
+    "gapType": "Partial gap year",
+    "earnings": "£5,000",
+    "cost": "£110.95"
+  }
+]
 },
 "RN000004A": {
   "journey": "forecast-enquiry/forecast-enquiry-rre",
@@ -863,4 +883,5 @@
     }
   ]
 }
+
 }
